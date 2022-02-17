@@ -3,9 +3,9 @@ TwoCarriers = 1;
 RC = 1;
 
 nx = 201;
-l = 1e-6;
+l = 1e-6; % material length
 
-x =linspace(0,l,nx);
+x =linspace(0,l,nx); % x intervals, evenly spaced
 dx = x(2)-x(1);
 xm = x(1:nx-1) + 0.5*dx;
 

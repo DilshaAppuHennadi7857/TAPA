@@ -39,7 +39,7 @@ PlotCount = 0;
 doPlotImage = 0; % set to 1 to draw the image
 
 % Simulation = 'PNJctEqBias';
-Simulation = 'PA6';
+Simulation = 'PNJctEqBias';
 
 if strcmp(Simulation,'GaussianTwoCar')
     eval('SetGaussian2CarParas');

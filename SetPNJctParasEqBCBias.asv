@@ -6,19 +6,23 @@ nx = 201;
 l = 1e-6; % material length
 
 x =linspace(0,l,nx); % x intervals, evenly spaced
-dx = x(2)-x(1);
+dx = x(2)-x(1); % differece between x intervals
 xm = x(1:nx-1) + 0.5*dx;
 
-ni = x < l/2;
-pi = x >= l/2;
+% ni = x < l/2; % one half of material is n-type
+% pi = x >= l/2; % other half of material is p-type
 
 Nd = 4e16 * 1e6; % Const. 1/cm3 (100 cm/m)^3
 Na = 1e16 * 1e6;
-NetDoping(ni) = Nd;
-NetDoping(pi) = -Na;
+NetDoping
 
-x0 = l/2;
-nw = l/20;
+% half of the material is n-type, half way through, material immediately
+% switches to p-type
+% NetDoping(ni) = Nd;
+% NetDoping(pi) = -Na;
+
+% x0 = l/2;
+% nw = l/20;
 npDisturbance = 0e16*1e6*exp(-((x-x0)/nw).^2);
 
 JBC = 1;

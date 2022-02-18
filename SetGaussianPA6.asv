@@ -13,7 +13,8 @@ xm = x(1:nx-1) + 0.5*dx;
 % Nd = linspace(1e16,20e16,nx);
 x0 = l/2;
 nw = l/20;
-Nd = 1e6*exp(((x-x0)/nw));
+Nd = exp(x);
+plot(Nd);
 
 NetDoping = ones(1,nx).*Nd; % doping
 
